@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jquery选择器练习</title>
+		<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<p>一些明细</p>
+		<ul>
+			<li>item 1</li><li>item 2</li>
+			<li>item 3</li><li>item 4</li>
+			<li>item 5</li>
+			<li>item 6</li>
+			<li>item 7</li>
+		</ul>
+		<a href="javascript:;">更多</a>
+	</body>
+	<script type="text/javascript">
+		$('li:eq(4)').hide();
+		$('li:eq(5)').hide();
+		/*
+		$('a:contains("更多")').click(function(){
+			$('li:eq(4)').show();
+			$('li:eq(5)').show();
+			$('a:contains("更多")').text("简化");
+		});
+		$('a:contains("简化")').click(function(){
+			$('li:eq(4)').hide();
+			$('li:eq(5)').hide();
+			$('a:contains("更多")').text("更多");
+		});
+*/
+		$('a').click(function(){
+			if($('a').text()=='更多'){
+				$('li:eq(4)').show();
+				$('li:eq(5)').show();
+				$('a').text("简化");
+			}
+			else{
+				$('li:eq(4)').hide();
+				$('li:eq(5)').hide();
+				$('a').text("更多");
+			}
+		});
+	</script>
+</html>
