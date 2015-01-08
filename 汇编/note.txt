@@ -13,3 +13,12 @@ IP 指针指令寄存器 FLAGS 标志段寄存器
 
 
 进入debug汇编调试下，R显示或修改各寄存器的内存；D显示想要展示的内存内容；A编辑汇编命令；T执行命令；U反汇编；
+
+js部分：
+js不指定变量类型，隐式转换，js中有：number string boolean null undefined 类型
+
+object 对象包括 function array date
+
+js中包括5种原始类型 1种对象类型。
+
+巧用+/-转换类型 num+0 -->字符串转换为数字    num+'' -->数字转换为字符串
